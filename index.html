@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Taís Bessa Arquitetura </title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="icon" type="image/x-icon" href="img/logo.jpg">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Tenor+Sans&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body data-bs-spy="scroll" data-bs-target=".navbar">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top w-100">
+      <div class="container">
+        <a class="navbar-brand" href="#"><img src="img/logo.jpg" id="logo" alt="Logo"> </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#sobre">Sobre</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Serviços</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Portfolio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Depoimentos</a>
+            </li>
+          </ul>
+          <a
+            href="https://api.whatsapp.com/send?phone=5533988144584&text=Ol%C3%A1%20Ta%C3%ADs%20Bessa,%20eu%20gostaria%20de%20saber%20mais%20informa%C3%A7%C3%B5es."
+            target="_blank"
+            class="btn-outline-brand ms-lg-3"
+            >Contato</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <section id="inicio" class="d-flex align-items-center">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-6 text-center">
+            <h1 class="display-3">Taís Bessa</h1>
+            <a href="#projetos" class="btn-brand btn-lg cta"> Ver Projetos</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="respiro">
+      <div class="container">
+        <div class="row">
+          <!-- Foto maior ocupando metade da seção -->
+          <div class="col-lg-6">
+            <img
+              src="img/Escada.jpg"
+              alt="Foto maior"
+              class="img-fluid img-maior"
+            />
+          </div>
+          <!-- Duas fotos menores empilhadas -->
+          <div class="col-lg-6">
+            <div class="mb-3">
+              <img
+                src="img/cozinha.jpg"
+                alt="Foto menor 1"
+                class="img-fluid img-menor"
+              />
+            </div>
+            <div>
+              <img
+                src="img/area.jpg"
+                alt="Foto menor 2"
+                class="img-fluid img-menor"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="sobre">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 offset-lg-1 animate" id="sobre-text">
+            <h3>Sobre</h3>
+            <h1>Conheça a arquiteta</h1>
+            <p id="texto-sobre">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Distinctio mollitia quibusdam, eos suscipit minus quae maxime
+              molestiae porro ad earum id debitis laboriosam sunt voluptatum,
+              ea, praesentium corporis fugit iure?
+            </p>
+            <a href="#projetos" class="btn-brand btn-lg" id="btn-mais"
+              >Ver Mais</a
+            >
+          </div>
+          <div class="col-lg-4 animate" id="sobre-imagem">
+            <img src="img/Tais1.jpg" class="img-fluid" alt="Foto da arquiteta" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

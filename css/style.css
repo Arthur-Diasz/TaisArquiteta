@@ -1,0 +1,313 @@
+:root {
+    --bg1: #B5AFAA;
+    --bg2: #3A3A3C;
+    --brand: #848484;
+    --secundaria: #5A5A5E;
+    --auxiliar: #F2F2F2;
+
+}
+
+
+
+body {
+    font-family: "Inter", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--body);
+    background-color: var(--bg2);
+
+}
+
+
+.intro {
+    margin-bottom: 60px;
+}
+
+.intro h1 {
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+
+/* NAVBAR */
+
+.navbar {
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+}
+
+.navbar .navbar-nav .nav-link.active {
+    color: var(--brand);
+}
+
+
+
+.navbar-brand {
+    font-family: "Lato", serif;
+    font-size: 32px;
+}
+
+#logo {
+    height: 50px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Tenor Sans, serif";
+    color: var(--auxiliar);
+}
+
+h3 {
+    color: var(--brand);
+}
+
+a {
+    color: var(--brand);
+    text-decoration: none;
+    transition: all 0.4s ease;
+    font-family: "Lato", serif;
+}
+
+a:hover {
+    color: var(--brand);
+}
+
+img {
+    width: 100%;
+}
+
+#icone {
+    height: 30px;
+    width: 30px;
+}
+
+.link-more {
+    display: inline-flex;
+    align-items: center;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    left: 1px;
+}
+
+.link-more .icon {
+    transition: all 0.4s ease;
+}
+
+.link-more:hover .icon {
+    transform: translateX(3px);
+}
+
+section {
+    padding-top: 160px;
+    padding-bottom: 160px;
+}
+
+
+#inicio {
+    background: url(../img/ResidencialEsmeralda.jpg) no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+#inicio::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.151);
+    z-index: 1;
+}
+
+#inicio .container {
+    position: relative;
+    z-index: 2;
+}
+
+#inicio p {
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+
+.btn-brand {
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    padding: 10px 20px;
+    opacity: 0;
+    animation: fadeInDown 1s ease-out forwards;
+    animation-delay: 0.5s;
+}
+
+.btn-brand:hover {
+    background-color: white;
+    color: var(--bg2);
+    transition: 0.3s ease;
+}
+
+/* Keyframes para a animação de descida */
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+        /* Inicia 20px acima */
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+        /* Posição final */
+    }
+}
+
+.btn-outline-brand {
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    padding: 5px 10px;
+    text-decoration: none;
+}
+
+.btn-outline-brand:hover {
+    background-color: white;
+    color: var(--bg2);
+    transition: 0.3s ease;
+}
+
+.cta {
+    color: var(--auxiliar);
+    text-decoration: none;
+    margin-top: 40px;
+}
+
+
+
+/* Estilo para a seção de respiro mais compacta */
+#respiro {
+    padding: 75px 0;
+    background-color: var(--bg1)
+}
+
+#respiro .img-maior {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+}
+
+#respiro .img-menor {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+
+
+/* SEÇÃO SOBRE CSS */
+#sobre {
+    background-color: var(--bg1);
+}
+
+#btn-mais {
+    margin-top: 40px;
+    text-decoration: none;
+    padding: 10px 10px;
+}
+
+#texto-sobre {
+    color: var(--auxiliar);
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+
+#sobre-text {
+    margin-top: 80px;
+}
+
+@media (max-width: 768px) {
+    #inicio {
+        background-attachment: scroll;
+    }
+
+    .img-maior {
+        margin-bottom: 20px;
+    }
+
+    #sobre-text,
+    #sobre-imagem {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    #sobre-imagem img {
+        max-width: 80%;
+        /* Reduz a largura da imagem para evitar que saia da tela */
+        height: auto;
+    }
+
+    #sobre-text {
+        margin-top: 40px;
+    }
+}
+
+@media (min-width: 769px) {
+    .animate {
+        opacity: 0;
+        transform: translateX(-50px);
+        transition: all 1.5s ease-out;
+    }
+
+    #sobre-imagem.animate {
+        transform: translateX(50px);
+    }
+
+    .animate.show {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@media (max-width: 991px) {
+    .navbar-collapse.show {
+        background: linear-gradient(135deg, rgba(34, 49, 63, 0.9), rgba(44, 62, 80, 0.9));
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.4);
+    }
+
+    /* Estilo das links no menu colapsado para legibilidade */
+    .navbar-collapse.show .nav-link {
+        color: #ffffff;
+        padding: 12px;
+        border-radius: 6px;
+        transition: background-color 0.3s ease;
+    }
+
+    .navbar-collapse.show .nav-link:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+        /* Leve destaque ao passar o mouse */
+    }
+
+    /* Botão de Contato no menu colapsado */
+    .navbar-collapse.show .btn-outline-brand {
+        color: #ffffff;
+        border-color: #ffffff;
+        margin-top: 15px;
+        padding: 10px 15px;
+        border-radius: 6px;
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    /* Efeito de hover no botão de contato */
+    .navbar-collapse.show .btn-outline-brand:hover {
+        background-color: #ffffff;
+        color: var(--bg1);
+        /* Ajuste para a cor de fundo do tema */
+    }
+}
