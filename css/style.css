@@ -1,6 +1,7 @@
 :root {
-    --bg1: #B5AFAA;
+    --bg1: #F2F2F2;
     --bg2: #3A3A3C;
+    /* B5AFAA */
     --brand: #848484;
     --secundaria: #5A5A5E;
     --auxiliar: #F2F2F2;
@@ -33,6 +34,7 @@ body {
     background-color: transparent;
     transition: background-color 0.3s ease;
     font-weight: bold;
+    position:absolute;
 }
 
 .navbar .navbar-nav .nav-link.active {
@@ -54,10 +56,14 @@ h1,
 h2,
 h3,
 h4,
-h5,
 h6 {
     font-family: "Tenor Sans, serif";
     color: var(--auxiliar);
+}
+
+h5 {
+    font-family: "Poppins", sans-serif;
+    color: #3F3F3F;
 }
 
 h3 {
@@ -108,7 +114,7 @@ section {
 
 
 #inicio {
-    background: url(../img/ResidencialEsmeralda.jpg) no-repeat center center fixed;
+    background: url(../img/Casa1.jpg) no-repeat center center fixed;
     background-size: cover;
     min-height: 100vh;
     display: flex;
@@ -152,20 +158,6 @@ section {
     transition: 0.3s ease;
 }
 
-/* Keyframes para a animação de descida */
-@keyframes fadeInDown {
-    0% {
-        opacity: 0;
-        transform: translateY(-20px);
-        /* Inicia 20px acima */
-    }
-
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-        /* Posição final */
-    }
-}
 
 .btn-outline-brand {
     background-color: transparent;
@@ -189,87 +181,124 @@ section {
 
 
 
-/* Estilo para a seção de respiro mais compacta */
-#respiro {
-    padding: 75px 0;
-    background-color: var(--bg1)
+/* Estilo da seção */
+#servicos {
+    background-color: #B5AFAA;
+    padding: 60px 0;
+    color: #ffffff;
+    font-family: "Heebo, serif";
 }
 
-#respiro .img-maior {
-    width: 100%;
-    height: 600px;
-    object-fit: cover;
+.etapas {
+    font-size: 14px;
+    letter-spacing: 2px;
+    font-weight: bold;
+    color: #F4F4F4;
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
-#respiro .img-menor {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-}
-
-
-
-/* SEÇÃO SOBRE CSS */
-#sobre {
-    background-color: var(--bg1);
-}
-
-#btn-mais {
-    margin-top: 40px;
-    text-decoration: none;
-    padding: 10px 10px;
-}
-
-#texto-sobre {
-    color: var(--auxiliar);
+.titulo-secao {
+    font-size: 36px;
+    font-weight: bold;
     margin-top: 10px;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
+    color: #ffffff;
+    font-family: "Tenor Sans, serif";
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
-#sobre-text {
-    margin-top: 80px;
+.descricao-secao,
+.detalhes-secao {
+    font-size: 16px;
+    color: #ffffff;
+    line-height: 1.6;
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: opacity 1s ease, transform 1s ease;
 }
 
+.servicos-lista {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.servico-item {
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    color: #ffffff;
+    margin-bottom: 15px;
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: opacity 1.2s ease, transform 1.2s ease;
+}
+
+.numero {
+    font-size: 70px;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.2);
+    margin-right: 15px;
+    font-family: "Lato", serif;
+}
+
+.btn-orcamento {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: opacity 1.4s ease, transform 1.4s ease;
+}
+
+.btn-orcamento:hover {
+    background-color: #ffffff;
+    color: #d0c7c2;
+
+}
+
+
+
+[data-scroll] {
+    opacity: 0;
+    transform: translateX(-30px);
+    /* Começa levemente abaixo da posição final */
+    transition: opacity 1 ease, transform 1s ease;
+}
+
+/* Animação ao rolar a tela */
+[data-scroll].visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.imagem-secao {
+    width: 100%;
+    border-radius: 8px;
+    opacity: 0;
+    transform: translateX(50px);
+    transition: opacity 1.4s ease, transform 1.4s ease;
+}
+
+/* Ocultar imagem em telas menores */
 @media (max-width: 768px) {
-    #inicio {
-        background-attachment: scroll;
+    .imagem-secao {
+        display: none;
     }
 
-    .img-maior {
-        margin-bottom: 20px;
-    }
-
-    #sobre-text,
-    #sobre-imagem {
-        text-align: center;
+    .btn-container {
+        display: flex;
+        justify-content: center;
         margin-top: 20px;
-    }
-
-    #sobre-imagem img {
-        max-width: 80%;
-        /* Reduz a largura da imagem para evitar que saia da tela */
-        height: auto;
-    }
-
-    #sobre-text {
-        margin-top: 40px;
-    }
-}
-
-@media (min-width: 769px) {
-    .animate {
-        opacity: 0;
-        transform: translateX(-50px);
-        transition: all 1.5s ease-out;
-    }
-
-    #sobre-imagem.animate {
-        transform: translateX(50px);
-    }
-
-    .animate.show {
-        opacity: 1;
-        transform: translateX(0);
     }
 }
 
