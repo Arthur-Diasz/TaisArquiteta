@@ -34,7 +34,7 @@ body {
     background-color: transparent;
     transition: background-color 0.3s ease;
     font-weight: bold;
-    position:absolute;
+    position: absolute;
 }
 
 .navbar .navbar-nav .nav-link.active {
@@ -144,7 +144,7 @@ section {
 
 .btn-brand {
     background-color: transparent;
-    color: white;
+    color: black;
     border: 2px solid white;
     padding: 10px 20px;
     opacity: 0;
@@ -173,10 +173,128 @@ section {
     transition: 0.3s ease;
 }
 
+.display-3 {
+    margin-bottom: 30px;
+}
+
 .cta {
-    color: var(--auxiliar);
+    color: white;
     text-decoration: none;
-    margin-top: 40px;
+    margin-top: 90px;
+    font-family: "Hebbo, serif";
+}
+
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+        /* Inicia 20px acima */
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+        /* Posição final */
+    }
+}
+
+
+/* Estilo para a seção de respiro mais compacta */
+#respiro {
+    padding: 75px 0;
+    background-color: var(--bg1)
+}
+
+#respiro .img-maior {
+    width: 100%;
+    height: 675px;
+    object-fit: cover;
+}
+
+#respiro .img-menor {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+/* SEÇÃO SOBRE */
+
+/* Estilos para a seção 'sobre' */
+#sobre {
+    display: flex;
+    align-items: center;
+    padding: 50px 0;
+    background-color: var(--bg1);
+}
+
+#sobre h2 {
+    color: #B5AFAA;
+}
+
+.sobre-conten {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 50px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+#sobre[data-scroll] .sobre-content {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.texto-sobre {
+    max-width: 50%;
+}
+
+.texto-sobre h3 {
+    font-size: 14px;
+    letter-spacing: 3px;
+    color: var(--brand);
+    margin-bottom: 10px;
+}
+
+.texto-sobre h2 {
+    font-size: 36px;
+    font-weight: 300;
+    color: var(--text-dark);
+    margin-bottom: 20px;
+}
+
+.texto-sobre p {
+    font-size: 16px;
+    color: var(--text-light);
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.btn-ver-mais {
+    padding: 10px 20px;
+    background-color: #848484;
+    color: #F2F2F2;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-ver-mais:hover {
+    background-color: #F2F2F2;
+    color: #848484;
+    cursor: pointer;
+    border: 2px solid #848484;
+}
+
+.imagem-sobre img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.sobre-txt {
+    font-size: 18px;
 }
 
 
@@ -256,7 +374,7 @@ section {
     transition: background-color 0.3s ease;
     margin-top: 20px;
     opacity: 0;
-    transform: translateX(-50px);
+    transform: translateX(50px);
     transition: opacity 1.4s ease, transform 1.4s ease;
 }
 
@@ -338,5 +456,23 @@ section {
         background-color: #ffffff;
         color: var(--bg1);
         /* Ajuste para a cor de fundo do tema */
+    }
+}
+
+@media (max-width: 991px) {
+    .imagem-secao {
+        display: none;
+    }
+
+    #servicos-text+.col-lg-5 .btn-orcamento {
+        margin-top: 20px;
+        display: block;
+        align-self: flex-start;
+        opacity: 1;
+        transform: translateX(0);
+        align-self: center;
+        /* Centraliza horizontalmente */
+        text-align: center;
+        /* Garante que o botão fique centralizado */
     }
 }
