@@ -14,7 +14,8 @@ body {
     font-family: "Inter", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: var(--body);
     background-color: var(--bg2);
-
+    overflow-x: hidden;
+    touch-action: pan-y;
 }
 
 
@@ -147,9 +148,6 @@ section {
     color: black;
     border: 2px solid white;
     padding: 10px 20px;
-    opacity: 0;
-    animation: fadeInDown 1s ease-out forwards;
-    animation-delay: 0.5s;
 }
 
 .btn-brand:hover {
@@ -180,8 +178,8 @@ section {
 .cta {
     color: white;
     text-decoration: none;
-    margin-top: 90px;
     font-family: "Hebbo, serif";
+    display: inline-block;
 }
 
 @keyframes fadeInDown {
@@ -207,7 +205,7 @@ section {
 
 #respiro .img-maior {
     width: 100%;
-    height: 675px;
+    height: 600px;
     object-fit: cover;
 }
 
@@ -217,68 +215,61 @@ section {
     object-fit: cover;
 }
 
+
 /* SEÇÃO SOBRE */
 
-/* Estilos para a seção 'sobre' */
+
 #sobre {
-    display: flex;
-    align-items: center;
-    padding: 50px 0;
     background-color: var(--bg1);
+    padding: 60px 0;
+    color: #ffffff;
+    font-family: "Heebo, serif";
 }
 
-#sobre h2 {
-    color: #B5AFAA;
-}
-
-.sobre-conten {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: auto;
-    margin-top: 50px;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.6s ease, transform 0.6s ease;
-}
-
-#sobre[data-scroll] .sobre-content {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.texto-sobre {
-    max-width: 50%;
-}
-
-.texto-sobre h3 {
+.sobre {
     font-size: 14px;
-    letter-spacing: 3px;
-    color: var(--brand);
+    letter-spacing: 2px;
+    font-weight: bold;
+    color: #F4F4F4;
+}
+
+#sobre-text {
+    margin-top: 100px;
+}
+
+.sobre-h5 {
+    font-size: 18px;
+    font-family: "Poppins, seric";
+    color: #B5AFAA;
     margin-bottom: 10px;
 }
 
-.texto-sobre h2 {
-    font-size: 36px;
-    font-weight: 300;
-    color: var(--text-dark);
+.titulo-sobre {
+    font-size: 34px;
+    font-weight: bold;
+    margin-top: 10px;
     margin-bottom: 20px;
+    color: var(--brand);
+    font-family: "Tenor Sans, serif";
 }
 
-.texto-sobre p {
+.descricao-sobre {
     font-size: 16px;
-    color: var(--text-light);
+    color: #666666;
     line-height: 1.6;
-    margin-bottom: 20px;
 }
+
 
 .btn-ver-mais {
-    padding: 10px 20px;
+    padding: 15px 25px;
     background-color: #848484;
     color: #F2F2F2;
     border: none;
     cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 50px;
+    font-family: "Heebo, serif";
+    display: inline-block;
 }
 
 .btn-ver-mais:hover {
@@ -288,15 +279,11 @@ section {
     border: 2px solid #848484;
 }
 
-.imagem-sobre img {
-    max-width: 100%;
+
+.imagem-sobre {
+    width: 100%;
     border-radius: 8px;
 }
-
-.sobre-txt {
-    font-size: 18px;
-}
-
 
 
 /* Estilo da seção */
@@ -312,9 +299,7 @@ section {
     letter-spacing: 2px;
     font-weight: bold;
     color: #F4F4F4;
-    opacity: 0;
-    transform: translateX(-50px);
-    transition: opacity 0.8s ease, transform 0.8s ease;
+   
 }
 
 .titulo-secao {
@@ -324,9 +309,7 @@ section {
     margin-bottom: 20px;
     color: #ffffff;
     font-family: "Tenor Sans, serif";
-    opacity: 0;
-    transform: translateX(-50px);
-    transition: opacity 0.8s ease, transform 0.8s ease;
+    
 }
 
 .descricao-secao,
@@ -334,9 +317,7 @@ section {
     font-size: 16px;
     color: #ffffff;
     line-height: 1.6;
-    opacity: 0;
-    transform: translateX(-50px);
-    transition: opacity 1s ease, transform 1s ease;
+    
 }
 
 .servicos-lista {
@@ -350,9 +331,7 @@ section {
     align-items: center;
     color: #ffffff;
     margin-bottom: 15px;
-    opacity: 0;
-    transform: translateX(-50px);
-    transition: opacity 1.2s ease, transform 1.2s ease;
+
 }
 
 .numero {
@@ -373,9 +352,7 @@ section {
     text-decoration: none;
     transition: background-color 0.3s ease;
     margin-top: 20px;
-    opacity: 0;
-    transform: translateX(50px);
-    transition: opacity 1.4s ease, transform 1.4s ease;
+   
 }
 
 .btn-orcamento:hover {
@@ -389,7 +366,6 @@ section {
 [data-scroll] {
     opacity: 0;
     transform: translateX(-30px);
-    /* Começa levemente abaixo da posição final */
     transition: opacity 1 ease, transform 1s ease;
 }
 
@@ -418,6 +394,8 @@ section {
         justify-content: center;
         margin-top: 20px;
     }
+
+
 }
 
 @media (max-width: 991px) {
@@ -471,8 +449,23 @@ section {
         opacity: 1;
         transform: translateX(0);
         align-self: center;
-        /* Centraliza horizontalmente */
         text-align: center;
-        /* Garante que o botão fique centralizado */
+
+    }
+
+
+    .btn-ver-mais {
+        margin-top: 20px;
+        display: block;
+        align-self: flex-start;
+        opacity: 1;
+        transform: translateX(0);
+        align-self: center;
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+    .img-menor1 {
+        margin-top: 20px;
     }
 }

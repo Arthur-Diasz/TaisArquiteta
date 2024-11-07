@@ -13,3 +13,9 @@ function scrollAnimation() {
 // Ativar animação ao rolar a página
 window.addEventListener("scroll", scrollAnimation);
 window.addEventListener("load", scrollAnimation);
+
+AOS.init({
+  duration: 1000, // Duração da animação em milissegundos
+  easing: "ease-in-out", // Tipo de easing para a animação
+  once: true, // Executa a animação apenas uma vez ao rolar a página
+});

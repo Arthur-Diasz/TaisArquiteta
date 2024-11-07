@@ -8,6 +8,10 @@
     <link rel="stylesheet" href="css/global.css" />
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+    />
 
     <link rel="icon" type="image/x-icon" href="img/logo.jpg" />
 
@@ -69,7 +73,12 @@
         <div class="row justify-content-center">
           <div class="col-lg-6 text-center">
             <h1 class="display-3">Taís Bessa</h1>
-            <a href="#projetos" class="btn-brand btn-lg cta">VER PROJETOS</a>
+            <a
+              href="#projetos"
+              class="btn-brand btn-lg cta"
+              data-aos="fade-down"
+              >VER PROJETOS</a
+            >
           </div>
         </div>
       </div>
@@ -78,15 +87,16 @@
     <section id="respiro">
       <div class="container">
         <div class="row">
-          <div class="col-lg-6">
+          <div class="col-lg-1"></div>
+          <div class="col-lg-6 img-esquerda" data-aos="fade-up">
             <img
-              src="img/cozinha.jpg"
+              src="img/casa2.jpg"
               alt="Foto maior"
               class="img-fluid img-maior"
             />
           </div>
 
-          <div class="col-lg-6">
+          <div class="col-lg-4 img-direita" data-aos="fade-up">
             <div class="mb-3">
               <img
                 src="img/piscina.jpg"
@@ -102,34 +112,35 @@
               />
             </div>
           </div>
+          <div class="col-lg-1"></div>
         </div>
       </div>
     </section>
 
     <section id="sobre">
-      <div class="container sobre-content">
+      <div class="container">
         <div class="row">
           <div class="col-lg-5 offset-lg-1" id="sobre-text">
-            <h5 class="sobre-txt" data-scroll>S O B R E</h5>
-            <h2 data-scroll>ARQUITETA</h2>
-            <p class="detalhes-sobre" data-scroll>
-              A Lado a Lado Arquitetura foi criada pelo arquiteto Fernando Reis,
-              após entender que cada projeto era na verdade a realização de um
-              sonho! Além disso, a Lado surgiu da necessidade de acolher o
-              cliente em suas dúvidas, mostrando que seu sonho pode se tornar
-              realidade sem burocracia e de uma forma inteiramente profissional,
-              ficando ao seu LADO em todas as etapas!
+            <h5 class="sobre-h5" data-aos="fade-right">S O B R E</h5>
+            <h2 class="titulo-sobre" data-aos="fade-right">ARQUITETA</h2>
+            <p class="descricao-sobre" data-aos="fade-right">
+              Aqui vai um texto sobre você, sua historia e tudo que possa ajudar
+              as pessoas a te conhecerem melhor. Lorem ipsum dolor sit amet
+              consectetur adipisicing elit. Porto quae, exercitationem unde,
+              tempore eos ad maiores eligendi et nemo reprehenderit libero est!
+              Officia voluptatem eius accusamus ad eveniet quidem fugit?
             </p>
-            <a href="#" class="btn-ver-mais" data-scroll>VER MAIS</a>
+
+            <a href="#" class="btn-ver-mais" data-aos="fade-right">VER MAIS</a>
           </div>
           <div
-            class="col-lg-5 d-flex flex-column align-items-center justify-content-center imagem-sobre"
+            class="col-lg-5 d-flex flex-column align-items-center justify-content-center"
           >
             <img
-              src="img/Tais3.jpg"
+              src="img/Tais4.jpg"
               alt="Foto de um quarto decorado"
-              class="imagem-secao"
-              data-scroll
+              class="imagem-sobre img-fluid"
+              data-aos="fade-left"
             />
           </div>
         </div>
@@ -140,13 +151,15 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-5 offset-lg-1" id="servicos-text">
-            <h5 class="etapas" data-scroll>ETAPAS</h5>
-            <h2 class="titulo-secao" data-scroll>SERVIÇOS PRESTADOS</h2>
-            <p class="descricao-secao" data-scroll>
+            <h5 class="etapas" data-aos="fade-right">ETAPAS</h5>
+            <h2 class="titulo-secao" data-aos="fade-right">
+              SERVIÇOS PRESTADOS
+            </h2>
+            <p class="descricao-secao" data-aos="fade-right">
               Somos um escritório de arquitetura com atendimento personalizado
               na qual ficamos ao lado dos nossos clientes em todas as etapas.
             </p>
-            <p class="detalhes-secao" data-scroll>
+            <p class="detalhes-secao" data-aos="fade-right">
               Com o projeto é possível ver todas as possibilidades de layout
               antes mesmo de começar a reforma. Todo detalhamento necessário
               será feito nesse projeto: layout, demolição, construção, elétrica,
@@ -154,19 +167,35 @@
               móveis.
             </p>
             <div class="servicos-lista">
-              <div class="servico-item" data-scroll>
+              <div
+                class="servico-item"
+                data-aos="fade-right"
+                data-aos-duration="1800"
+              >
                 <span class="numero">01</span> Criação e elaboração do projeto
                 com imagens realistas;
               </div>
-              <div class="servico-item" data-scroll>
+              <div
+                class="servico-item"
+                data-aos="fade-right"
+                data-aos-duration="1900"
+              >
                 <span class="numero">02</span> Acompanhamento e visitas técnicas
                 à obra;
               </div>
-              <div class="servico-item" data-scroll>
+              <div
+                class="servico-item"
+                data-aos="fade-right"
+                data-aos-duration="2000"
+              >
                 <span class="numero">03</span> Acompanhamento em lojas para
                 compra de materiais de acabamentos;
               </div>
-              <div class="servico-item" data-scroll>
+              <div
+                class="servico-item"
+                data-aos="fade-right"
+                data-aos-duration="2100"
+              >
                 <span class="numero">04</span> Estudo de viabilidade financeira
                 do custo da obra.
               </div>
@@ -179,15 +208,24 @@
               src="img/cozinha.jpg"
               alt="Foto de um quarto decorado"
               class="imagem-secao"
-              data-scroll
+              data-aos="fade-left"
+              data-aos-duration="2200"
             />
-            <a href="#" class="btn-orcamento" data-scroll>FAZER ORÇAMENTO</a>
+            <a
+              href="https://api.whatsapp.com/send?phone=5533988144584&text=Ol%C3%A1%20Ta%C3%ADs%20Bessa,%20eu%20gostaria%20de%20saber%20mais%20informa%C3%A7%C3%B5es."
+              target="_blank"
+              class="btn-orcamento"
+              data-aos="fade-left"
+              data-aos-duration="2000"
+              >FAZER ORÇAMENTO</a
+            >
           </div>
         </div>
       </div>
     </section>
 
     <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>
