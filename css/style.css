@@ -36,6 +36,7 @@ body {
     transition: background-color 0.3s ease;
     font-weight: bold;
     position: absolute;
+    background-color: rgba(0, 0, 0, 0.3);
 }
 
 .navbar .navbar-nav .nav-link.active {
@@ -205,14 +206,21 @@ section {
 
 #respiro .img-maior {
     width: 100%;
-    height: 600px;
+    height: 620px;
     object-fit: cover;
 }
 
+#respiro .img-menor1,
 #respiro .img-menor {
     width: 100%;
     height: 300px;
     object-fit: cover;
+}
+
+.img-direita-top,
+.img-direita-bottom {
+    display: flex;
+    justify-content: center;
 }
 
 
@@ -299,7 +307,7 @@ section {
     letter-spacing: 2px;
     font-weight: bold;
     color: #F4F4F4;
-   
+
 }
 
 .titulo-secao {
@@ -309,7 +317,7 @@ section {
     margin-bottom: 20px;
     color: #ffffff;
     font-family: "Tenor Sans, serif";
-    
+
 }
 
 .descricao-secao,
@@ -317,7 +325,7 @@ section {
     font-size: 16px;
     color: #ffffff;
     line-height: 1.6;
-    
+
 }
 
 .servicos-lista {
@@ -352,7 +360,7 @@ section {
     text-decoration: none;
     transition: background-color 0.3s ease;
     margin-top: 20px;
-   
+
 }
 
 .btn-orcamento:hover {
@@ -396,45 +404,6 @@ section {
     }
 
 
-}
-
-@media (max-width: 991px) {
-    .navbar-collapse.show {
-        background: linear-gradient(135deg, rgba(34, 49, 63, 0.9), rgba(44, 62, 80, 0.9));
-        padding: 20px;
-        border-radius: 12px;
-        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.4);
-    }
-
-    /* Estilo das links no menu colapsado para legibilidade */
-    .navbar-collapse.show .nav-link {
-        color: #ffffff;
-        padding: 12px;
-        border-radius: 6px;
-        transition: background-color 0.3s ease;
-    }
-
-    .navbar-collapse.show .nav-link:hover {
-        background-color: rgba(255, 255, 255, 0.1);
-        /* Leve destaque ao passar o mouse */
-    }
-
-    /* Botão de Contato no menu colapsado */
-    .navbar-collapse.show .btn-outline-brand {
-        color: #ffffff;
-        border-color: #ffffff;
-        margin-top: 15px;
-        padding: 10px 15px;
-        border-radius: 6px;
-        transition: background-color 0.3s ease, color 0.3s ease;
-    }
-
-    /* Efeito de hover no botão de contato */
-    .navbar-collapse.show .btn-outline-brand:hover {
-        background-color: #ffffff;
-        color: var(--bg1);
-        /* Ajuste para a cor de fundo do tema */
-    }
 }
 
 @media (max-width: 991px) {
