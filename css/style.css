@@ -116,7 +116,7 @@ section {
 
 
 #inicio {
-    background: url(../img/Casa1.jpg) no-repeat center center fixed;
+    background: url(../img/Casa1.webp) no-repeat center center fixed;
     background-size: cover;
     min-height: 100vh;
     display: flex;
@@ -390,6 +390,126 @@ section {
     transform: translateX(50px);
     transition: opacity 1.4s ease, transform 1.4s ease;
 }
+
+/* CONQUISTAS */
+#conquistas {
+    background: linear-gradient(to right, #B5AFAA, rgba(29, 36, 71, 0.1)), url(../img/area.webp);
+    background-size: cover;
+    background-position: center;
+    padding-top: 50px;
+}
+
+#conquistas h1 {
+    color: #ffffff;
+}
+
+#conquistas p {
+    color: #ffffff;
+}
+
+
+
+/* AVALIAÇÕES */
+
+
+
+#reviews {
+    background-color: var(--bg1);
+}
+
+#reviews h6 { 
+    color: #2C2C2C;
+    font-family: "Lato", serif;
+}
+
+#reviews h1 {
+    color: #B5AFAA;
+    font-family: "Tenor Sans, serif";
+}
+
+#reviews h5 {
+    color: #666666;
+    font-family: "Heebo, serif";
+}
+
+
+.review {
+    padding: 32px;
+    background-color: var(--bg2);
+    position: relative;
+}
+
+.review .icon {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    background-color: var(--brand);
+    color: var(--bg1);
+    justify-content: center;
+    border-radius: 100px;
+    position: absolute;
+    right: 48px;
+}
+
+.review img {
+    width: 60px;
+    border-radius: 100px;
+}
+
+.review {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.review .d-flex {
+    align-items: center;
+}
+
+.review img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.review h5,
+.review p.text-muted {
+    margin: 0;
+    line-height: 1.2;
+}
+
+.review div {
+    margin-left: 10px;
+}
+
+.review:hover {
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+
+/* FOOTER */
+
+.footer-bottom {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border-top: 1px solid var(--bg2);
+    background-color: #F2F2F2;
+}
+
+.link-footer {
+    height: 40px;
+    width: auto;
+}
+
+#link-instagram {
+    margin-right: 20px;
+}
+
 
 /* Ocultar imagem em telas menores */
 @media (max-width: 768px) {
